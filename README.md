@@ -92,3 +92,6 @@
    </script>
    ```
 
+5. How to target Javascript for Legacy Browsers? [Old Version Browsers].
+
+    > ![](7.png)
