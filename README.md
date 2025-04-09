@@ -92,6 +92,35 @@
    </script>
    ```
 
-5. How to target Javascript for Legacy Browsers? [Old Version Browsers].
-
+5. How to target Javascript for Legacy Browsers? [Old Version Browsers]
+   
+   How to target advanced features of CSS to work with all browsers?
+    > Refer Image
+    >
     > ![](7.png)
+
+6. How to link external javascript file to html file?
+   ```
+   <script type = "text/javascript" src = "">
+   ```
+
+7. How Javascript take the control over the HTML elements?
+   > We need to target the html elements and take control over the elements.
+
+---
+<br>
+
+![](11.png)
+<br><br>
+![](8.png)
+<br><br>
+![](9.png)
+<br><br>
+![](10.png)
+#### Note:- 
+1.  In Javascript "Arrays are dynamic".
+2. Acessing the elements using DOM heirarchy through index is not a good practice.
+   > Solution: Access it with a name.
+
+
+
