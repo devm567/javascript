@@ -122,5 +122,18 @@
 2. Acessing the elements using DOM heirarchy through index is not a good practice.
    > Solution: Access it with a name.
 
+#### Using name attibute for HTML Elements
+syntax: 
+- name.property = value; //name is not a form element <br>
+- formName.elementName.property = value; // if element is a form input
+<img src="12.png" width="500" height="100">
+
+syntax: arrayOfElements = document.getElementsByName("Name").<br>
+arrayOfElements[index].property = value;
+
+#### Limitation
+a. In case of radio buttons, multiple elements will have same name, at that time javascript code would fail.
+
+
 
 
