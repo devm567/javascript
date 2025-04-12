@@ -133,6 +133,10 @@ arrayOfElements[index].property = value;
 
 #### Limitation
 a. In case of radio buttons, multiple elements will have same name, at that time javascript code would fail.
+<br><br>
+![](13.png)
+<br>
+![](14.png)
 
 
 
