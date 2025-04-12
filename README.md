@@ -156,6 +156,10 @@ f. validation state pseudo <br>
 g. element state pseudo <br><br>
 
 FAQ : What is the difference btw querySelector() and querySelectorAll()?
+> querySelector() -> matches with the first element and retrieve the first element. <br>
+if no match it returns null. <br>
+querySelectorAll() -> matches all the elements and retrieve an array of elements. <br>
+if no match it returns an empty array [].
 
 
 
