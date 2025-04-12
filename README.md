@@ -136,7 +136,27 @@ a. In case of radio buttons, multiple elements will have same name, at that time
 <br><br>
 ![](13.png)
 <br>
-![](14.png)
+<img src="14.png" width="400" height="100">
+
+solution: access the element using "id".
+
+3. document.getElementById("idName")
+   
+   limitation: while using styling if we use id selector on multiple elements then selecting the elements using javascript with the help of "ID" becomes tricky.
+
+solution: use querySelector("css_selector");
+
+css selectors <br>
+a. primary : type(elementName), id(#), className(.) <br>
+b. rational : parent child, adjacent(+), sibling(~), direct child(>) <br>
+c. attribute: elementName[attribute], elementName[attributeName = value] <br>
+d. dynamic pseudo <br>
+e. structural <br>
+f. validation state pseudo <br>
+g. element state pseudo <br><br>
+
+FAQ : What is the difference btw querySelector() and querySelectorAll()?
+
 
 
 
