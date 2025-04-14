@@ -199,4 +199,8 @@ Note:
    <body onload="">
    </body>
    ```
-   Refer: ![File](./jscodes/thirdjsclass.html)
+   Refer: [File](./jscodes/thirdjsclass.html)
+
+   if a function is not returning anything in statically type language like c, c++, java, we can't call that function in output method calls like printf(), cout<<, System.out.println().<br><br>
+   In Javascript, if a function is returning void still we can keep in output method calls and the output in the console would be "undefined".
+
