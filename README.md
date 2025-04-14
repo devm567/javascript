@@ -170,6 +170,26 @@ document <br>
    getElementsByClassName() : Array <br>
 
 
+-----
+## Javascript i/p and o/p operations
+| Output                     | Input |
+| :------------------------- | :---- |
+| Javascript Output Methods |       |
+| a. alert()                 |       |
+| b. confirm()               |       |
+| c. document.write()        |       |
+| d. console.****()          |       |
+| e. innerText vs innerHtml  |       |
+| f. outerText vs outerHtml  |       |
+| g. textContent             |       |
 
+#### 1. alert():
 
-
+To display some alert message to the user upon doing some operation we use "alert()".
+syntax: void: alert("string")
+ 
+limitations:
+ ```
+   a. It accepts only string input, we can't use any HTML + CSS code to present our output.
+   b. To get the cursor to the new line we need to use the delimiter called "\n".
+ ```
