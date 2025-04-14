@@ -159,7 +159,15 @@ FAQ : What is the difference btw querySelector() and querySelectorAll()?
 > querySelector() -> matches with the first element and retrieve the first element. <br>
 if no match it returns null. <br>
 querySelectorAll() -> matches all the elements and retrieve an array of elements. <br>
-if no match it returns an empty array [].
+if no match it returns an empty array []. <br>
+
+document <br>
+   getElementsByName() : Array <br>
+   getElementById() : unique element <br>
+   querySelector() : unique element <br>
+   querySelectorAll() : Array <br>
+   getElementsByTagName() : Array <br>
+   getElementsByClassName() : Array <br>
 
 
 
