@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p name="text">
+        Hello User
+    </p>
+    <p name="text">
+        Welcome User
+    </p>
+</body>
+</html>
+<script>
+    textArray = document.getElementsByName("text");
+    for(let i=0; i<textArray.length; i++){
+        let p = textArray[i];
+        p.textContent = "Paragraph";
+        p.style.color = "red";
+        p.style.fontWeight = "bold";
+    }
+
+    textArray.forEach(function(p){
+        console.log(p);
+        p.style.color = "blue";
+    })
+</script>

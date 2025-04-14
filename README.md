@@ -174,7 +174,7 @@ document <br>
 ## Javascript i/p and o/p operations
 | Output                     | Input |
 | :------------------------- | :---- |
-| Javascript Output Methods |       |
+| Javascript Output Methods  |       |
 | a. alert()                 |       |
 | b. confirm()               |       |
 | c. document.write()        |       |
@@ -193,3 +193,10 @@ limitations:
    a. It accepts only string input, we can't use any HTML + CSS code to present our output.
    b. To get the cursor to the new line we need to use the delimiter called "\n".
  ```
+Note:
+   > To ensure the script would run upon loading the DOM we need to go for an even called "onload" on body element.
+   ```html
+   <body onload="">
+   </body>
+   ```
+   Refer: ![File](./jscodes/thirdjsclass.html)

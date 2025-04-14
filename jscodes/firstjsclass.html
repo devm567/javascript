@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin-top: 15px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div name="imgDiv">
+        <img height="100" width="100" border="1" name="poster">
+    </div>
+    <div>
+        <form name="frmLogin">
+            <h1>Username</h1>
+            Username <input type="text" name="username"><br><br>
+            Password <input type="password" name="pwd"><br><br>
+            <input type="button" name="btnLogin">
+        </form>
+    </div>
+    <div>
+        <form name="frmRegister">
+            <h1>Register</h1>
+            Email <input type="text" name="email"><br><br>
+            <input type="button" name="btnRegister">
+        </form>
+    </div> 
+</body>
+</html>
+
+<script>
+    // window.document.images[0].src = "./public/images/a2.jpg";
+    // window.document.images[0].alt = "Image not available";
+
+    // window.document.forms[0].elements[1].value="Submit";
+    // window.document.forms[1].elements[1].value="Login";
+
+    poster.src = "./public/images/a1.jpg";
+    frmLogin.btnLogin.value = "Login";
+    frmRegister.btnRegister.value = "Submit";
+
+    imgDivArray = document.getElementsByName("imgDiv")[0];
+    // imgDivArray.style.border = "15px dotted red";
+    // imgDivArray.style.width = "100px";
+    // imgDivArray.style.height = "100px";
+
+    imgDivArray.style.cssText = "border: 15px dotted green; width:100px; height:100px"
+</script>
