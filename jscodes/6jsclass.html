@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function deleteRecord(){
+            flag = confirm("R u sure u want to delete?")
+            if(flag){
+                document.querySelector("h1").outerHTML = "<h3 style='color:red;'>Record deleted successfully</h3>"
+            }
+            else{
+                document.querySelector("p").innerHTML = "<h3 style='color:green;'>You Pressed cancel button</h3>"
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="deleteRecord()">
+        Delete Record
+    </button>
+    <h1>
+
+    </h1>
+    <p>
+
+    </p>
+</body>
+</html>

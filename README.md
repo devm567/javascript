@@ -179,8 +179,8 @@ document <br>
 | b. confirm()               |       |
 | c. document.write()        |       |
 | d. console.****()          |       |
-| e. innerText vs innerHtml  |       |
-| f. outerText vs outerHtml  |       |
+| e. innerText vs innerHTML  |       |
+| f. outerText vs outerHTML  |       |
 | g. textContent             |       |
 
 #### 1. alert():
@@ -244,4 +244,45 @@ a. It disturbs the DOM, the content will be loaded in the same page but on anoth
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if outer string is in ' "" ' <br>
 Eg: <img src="15.png" width="250">
 
-Refer: [File](./jscodes/5jsclass.html)
+Refer: [File](./jscodes/5jsclass.html) 
+
+
+
+
+#### 4. innerHTML vs outerHTML
+   
+   This property is used to present the content on the same page along with other elements in the page.
+   <br>
+
+syntax:
+- accesselement.innerHTML = "String | markup | expression";
+- accesselement.outerHTML = "String | markup | expression";
+  <br><br>
+
+innerHTML: It keeps the element as the child element in the accessed container. <br>
+outerHTML: It replaces the accessed container with the specified element(good for realtime).<br>
+
+Refer: [File](./jscodes/6jsclass.html)
+
+<img src="16.png">
+
+`<h1>` is replaced with `<h3>` whereas the second `<h3>` is placed  inside `<p>`.
+
+<br>
+
+#### 5. innerText vs outerText
+This property is used to present the content on the same page along with other elements in the page.
+   <br>
+
+syntax:
+- accesselement.innerText = "String";
+- accesselement.outerText = "String";
+  <br><br>
+
+#### 6. textContent(used in realtime)
+This property is used to present the content on the same page along with other elements in the page.
+   <br>
+
+syntax:
+- accesselement.textContent = "String";
+  <br><br>
