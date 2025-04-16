@@ -192,6 +192,7 @@ limitations:
  ```
    a. It accepts only string input, we can't use any HTML + CSS code to present our output.
    b. To get the cursor to the new line we need to use the delimiter called "\n".
+   c. We don't have cancel button to stop the process(use esc button).
  ```
 Note:
    > To ensure the script would run upon loading the DOM we need to go for an even called "onload" on body element.
@@ -204,3 +205,18 @@ Note:
    if a function is not returning anything in statically type language like c, c++, java, we can't call that function in output method calls like printf(), cout<<, System.out.println().<br><br>
    In Javascript, if a function is returning void still we can keep in output method calls and the output in the console would be "undefined".
 
+#### 2. confirm()
+This method is used to get the confirmation from the user.<br>
+It has two buttons **ok** and **cancel**. <br>
+   - ok     ---> true
+   - cancel ---> false <br>
+
+syntax:
+- boolean: confirm("msg");
+
+limitations:
+```
+   a. It accepts only string input, we can't use any HTML + CSS code to present our output.
+   b. To get the cursor to the new line we need to use the delimiter called "\n".
+```
+Eg1: Refer [File](./jscodes/4jsclass.html)
