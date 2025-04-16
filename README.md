@@ -228,8 +228,8 @@ Eg1: Refer [File](./jscodes/4jsclass.html)
 This method is used to write the content on the page, not like popups.
 
 syntax:
-  - void: document.write(string|expression|markup)
-  - void: document.writeln(string|expression|markup) 
+  - void: document.write(string|expression|markup) : cursor in same line
+  - void: document.writeln(string|expression|markup) : brings the cursor to new line
 
 <br>
 
@@ -239,7 +239,9 @@ Limitation
 a. It disturbs the DOM, the content will be loaded in the same page but on another "window".
 ```
 
-> :memo: **Note:** String representation ""<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if outer string is in " '' "; <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if outer string is in ' "" '; <br>
-Eg: <img src="15.png">
+> :memo: **Note:** String representation "" | ''<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if outer string is in " '' " <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if outer string is in ' "" ' <br>
+Eg: <img src="15.png" width="250">
+
+Refer: [File](./jscodes/5jsclass.html)
