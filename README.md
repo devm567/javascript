@@ -294,13 +294,15 @@ syntax:
 a. string: prompt("message", "optional value"); <br>
 b. string: prompt("message"); <br>
 
+<img src="17.png">
+
 Note: The entered input will always be in the form of "String".<br>
 If the entered input is of the number type then we need to go for "typecoersion|typecasting" before processing the input.<br>
 
 To print the value of the variable within the String we use the following syntax:<br>
 a. \`${variableName}`<br>
 b. "" + variableName<br>
-c. "" , variableName<br>
+c. "", variableName<br>
 
 Refer: [File](./jscodes/7jsclass.html)
 
