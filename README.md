@@ -172,17 +172,18 @@ document <br>
 
 -----
 ## Javascript i/p and o/p operations
-| Output                     | Input |
-| :------------------------- | :---- |
-| Javascript Output Methods  |       |
-| a. alert()                 |       |
-| b. confirm()               |       |
-| c. document.write()        |       |
-| d. console.****()          |       |
-| e. innerText vs innerHTML  |       |
-| f. outerText vs outerHTML  |       |
-| g. textContent             |       |
+| Output                    | Input                                 |
+| :------------------------ | :------------------------------------ |
+| Javascript Output Methods | Java Input Methods                    |
+| a. alert()                | a. prompt()                           |
+| b. confirm()              | b. queryString                        |
+| c. document.write()       | c. using form elements(commonly used) |
+| d. console.****()         |                                       |
+| e. innerHTML vs outerHTML |                                       |
+| f. innerText vs outerText |                                       |
+| g. textContent            |                                       |
 
+## Javascript Output Methods
 #### 1. alert():
 
 To display some alert message to the user upon doing some operation we use "alert()".
@@ -286,3 +287,20 @@ This property is used to present the content on the same page along with other e
 syntax:
 - accesselement.textContent = "String";
   <br><br>
+
+## Javascript Input Methods
+
+#### 1. prompt()
+a. string: prompt("message", "optional value"); <br>
+b. string: prompt("message"); <br>
+
+Note: The entered input will always be in the form of "String".<br>
+If the entered input is of the number type then we need to go for "typecoersion|typecasting" before processing the input.<br>
+
+To print the value of the variable within the String we use the following syntax:<br>
+a. \`${variableName}`<br>
+b. "" + variableName<br>
+c. "" , variableName<br>
+
+Refer: [File](./jscodes/7jsclass.html)
+
