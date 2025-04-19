@@ -306,3 +306,20 @@ c. "", variableName<br>
 
 Refer: [File](./jscodes/7jsclass.html)
 
+#### 2. querystring
+It is a string which is constructed by the browser in the form of "K=V" pair in the form page. <br>
+This string will be appended to the URL of the page.
+
+syntax: url ? key1 = value1 & key2 = value2
+
+To get querystring in javascript(Browser) we use BOM concept.<br>
+syntax: str = location.search;
+
+Note: Since the data is stored in string format we use string methods to retreive the result.<br>
+a. indexOf("") : number<br>
+b. slice(index) : string
+
+![](18.png)
+![](19.png)
+
+Refer: [File](./jscodes/8jsclass.html)
