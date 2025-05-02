@@ -39,38 +39,41 @@
    }
    ```
    
-4️⃣  Javascript is not 100% OOPs language.
-    - it does not support dynamic polymorphism.
-    - it is not secured (deletes cache memory).
-  ---
+4️⃣ Javascript is not 100% OOPs language.
+   - ❌ it does not support dynamic polymorphism.
+   - ❌ it is not secured (deletes cache memory).
+
 ![](./img/4.png)
+
 ![](./img/5.png)
 
-## Complete Overview of Page Rendering
+## 🧭 Complete Overview of Page Rendering
 ![](./img/6.png)
 
-### FAQS
-1. What is MIME type for script?
+###  ❓ FAQS
+1. 💬  What is MIME type for script?
    
    ```
    1. <script type="text/javascript"></script>
    2. <script type="module"></script>
    ```
 
-2. What is the difference between script in head and body?
+2. 🧠 What is the difference between script in head and body?
    
     > In head section: It would be available in browser memory later it will be used while rendering.
     > 
     > In Body section: It would be a part of UI page directly.
 
-3. How Javascript converts Static Dom into Dynamic Dom?
+3. 🔄 How Javascript converts Static Dom into Dynamic Dom?
    
    > By linking Javascript code to html files.
 
-4. What is strict mode in Javascript?
+4. 🧷  What is strict mode in Javascript?
    > Javascript by default would not be in strict mode(no rules in declaration).
    >
    > In order to turn the strict mode "ON" we need to use "use strict";
+
+   📌 Examples:
 
    ```
    eg1: 
@@ -99,61 +102,62 @@
    </script>
    ```
 
-5. How to target Javascript for Legacy Browsers? [Old Version Browsers]
+5. 🌐  How to target Javascript for Legacy Browsers? [Old Version Browsers]
    
    How to target advanced features of CSS to work with all browsers?
     > Refer Image
     >
     > ![](./img/7.png)
 
-6. How to link external javascript file to html file?
+6. 🔗 How to link external javascript file to html file?
    ```
    <script type = "text/javascript" src = "">
    ```
 
-7. How Javascript take the control over the HTML elements?
-   > We need to target the html elements and take control over the elements.
+7. 🎮 How Javascript take the control over the HTML elements?
+   > 👉 We need to target the html elements and take control over the elements.
 
 ---
 <br>
 
-![](./img/11.png)
+<img src="./img/11.png" width="300">
 <br><br>
-![](./img/8.png)
+<img src="./img/8.png">
 <br><br>
-![](./img/9.png)
+<img src="./img/9.png" width="200">
 <br><br>
-![](./img/10.png)
-#### Note:- 
-1.  In Javascript "Arrays are dynamic".
-2. Acessing the elements using DOM heirarchy through index is not a good practice.
-   > Solution: Access it with a name.
+<img src="./img/10.png" width="200">
 
-#### Using name attibute for HTML Elements
-syntax: 
+#### 📝 Note:- 
+1. ✅ In Javascript "Arrays are dynamic".
+2. ⚠️ Acessing the elements using DOM heirarchy through index is not a good practice.
+   > 💡 Solution: Access it with a name.
+
+#### 🏷️ Using `name` attibute for HTML Elements
+📌 syntax: 
 - name.property = value; //name is not a form element <br>
 - formName.elementName.property = value; // if element is a form input
 <img src="./img/12.png" width="500" height="100">
 
-syntax: arrayOfElements = document.getElementsByName("Name").<br>
+📌 syntax: arrayOfElements = document.getElementsByName("Name").<br>
 arrayOfElements[index].property = value;
 
-#### Limitation
-a. In case of radio buttons, multiple elements will have same name, at that time javascript code would fail.
+#### ⚠️ Limitation with `name`
+a. In case of radio buttons, multiple elements will have same `name`, at that time javascript code would fail.
 <br><br>
 ![](./img/13.png)
 <br>
 <img src="./img/14.png" width="400" height="100">
 
-solution: access the element using "id".
+solution: access the element using `id`.
 
-3. document.getElementById("idName")
+3. 📌 document.getElementById("idName")
    
-   limitation: while using styling if we use id selector on multiple elements then selecting the elements using javascript with the help of "ID" becomes tricky.
+   ⚠️ Limitation: while using styling if we use id selector on multiple elements then selecting the elements using javascript with the help of "ID" becomes tricky.
 
-solution: use querySelector("css_selector");
+💡 solution: use querySelector("css_selector");
 
-css selectors <br>
+🎯 CSS Selectors <br>
 a. primary : type(elementName), id(#), className(.) <br>
 b. rational : parent child, adjacent(+), sibling(~), direct child(>) <br>
 c. attribute: elementName[attribute], elementName[attributeName = value] <br>
@@ -162,7 +166,7 @@ e. structural <br>
 f. validation state pseudo <br>
 g. element state pseudo <br><br>
 
-FAQ : What is the difference btw querySelector() and querySelectorAll()?
+❓ FAQ : What is the difference btw querySelector() and querySelectorAll()?
 > querySelector() -> matches with the first element and retrieve the first element. <br>
 if no match it returns null. <br>
 querySelectorAll() -> matches all the elements and retrieve an array of elements. <br>
@@ -178,8 +182,8 @@ document <br>
 
 
 -----
-## Javascript i/p and o/p operations
-| Output                    | Input                                 |
+## 🔁 Javascript i/p and o/p operations
+| 📤 Output                    | 📥 Input                                 |
 | :------------------------ | :------------------------------------ |
 | Javascript Output Methods | Java Input Methods                    |
 | a. alert()                | a. prompt()                           |
@@ -190,25 +194,25 @@ document <br>
 | f. innerText vs outerText |                                       |
 | g. textContent            |                                       |
 
-## Javascript Output Methods
-#### 1. alert():
+## 📤 Javascript Output Methods
+#### 1. 🛎️ alert():
 
 To display some alert message to the user upon doing some operation we use "alert()".
 syntax: void: alert("string")
  
-limitations:
+⚠️ limitations:
  ```
    a. It accepts only string input, we can't use any HTML + CSS code to present our output.
    b. To get the cursor to the new line we need to use the delimiter called "\n".
    c. We don't have cancel button to stop the process(use esc button).
  ```
-Note:
+📌 Note:
    > To ensure the script would run upon loading the DOM we need to go for an even called "onload" on body element.
    ```html
    <body onload="">
    </body>
    ```
-   Refer: [File](./jscodes/thirdjsclass.html)
+   📎 Refer: [File](./jscodes/thirdjsclass.html)
 
    if a function is not returning anything in statically type language like c, c++, java, we can't call that function in output method calls like printf(), cout<<, System.out.println().<br><br>
    In Javascript, if a function is returning void still we can keep in output method calls and the output in the console would be "undefined".
