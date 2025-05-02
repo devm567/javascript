@@ -195,7 +195,7 @@ document <br>
 | g. textContent            |                                       |
 
 ## 📤 Javascript Output Methods
-#### 1️⃣ 🛎️ alert():
+### 1️⃣ 🛎️ alert():
 
 To display some alert message to the user upon doing some operation we use "alert()".
 syntax: void: alert("string")
@@ -217,7 +217,9 @@ syntax: void: alert("string")
    if a function is not returning anything in statically type language like c, c++, java, we can't call that function in output method calls like printf(), cout<<, System.out.println().<br><br>
    In Javascript, if a function is returning void still we can keep in output method calls and the output in the console would be "undefined".
 
-#### 2️⃣ ❓ confirm()
+---
+
+### 2️⃣ ❓ confirm()
 This method is used to get the confirmation from the user.<br>
 It has two buttons **ok** and **cancel**. <br>
    - ✅ ok     ---> true
@@ -236,7 +238,9 @@ It has two buttons **ok** and **cancel**. <br>
 ```
 Eg1: 📎 Refer [File](./jscodes/4jsclass.html)
 
-#### 3️⃣ 📝  document.write()
+---
+
+### 3️⃣ 📝  document.write()
 This method is used to write the content on the page, not like popups.
 
 📌 syntax:
@@ -259,9 +263,9 @@ Eg: <img src="./img/15.png" width="250">
 📎 Refer: [File](./jscodes/5jsclass.html) 
 
 
+---
 
-
-#### 4️⃣ 🧩 innerHTML vs outerHTML
+### 4️⃣ 🧩 innerHTML vs outerHTML
    
    This property is used to present the content on the same page along with other elements in the page.
    <br>
@@ -282,7 +286,9 @@ outerHTML: It replaces the accessed container with the specified element(good fo
 
 <br>
 
-#### 5️⃣ 🖋️ innerText vs outerText
+---
+
+### 5️⃣ 🖋️ innerText vs outerText
 This property is used to present the content on the same page along with other elements in the page.
    <br>
 
@@ -291,7 +297,9 @@ syntax:
 - accesselement.outerText = "String";
   <br><br>
 
-#### 6️⃣  🧾 textContent(used in realtime)
+---
+
+### 6️⃣  🧾 textContent(used in realtime)
 This property is used to present the content on the same page along with other elements in the page.
    <br>
 
@@ -301,7 +309,7 @@ syntax:
 
 ## 📥 Javascript Input Methods
 
-#### 1️⃣ 💬 prompt()
+### 1️⃣ 💬 prompt()
 a. string: prompt("message", "optional value"); <br>
 b. string: prompt("message"); <br>
 
@@ -317,7 +325,9 @@ c. "", variableName<br>
 
 Refer: [File](./jscodes/7jsclass.html)
 
-#### 2️⃣ 🔑 querystring
+---
+
+### 2️⃣ 🔑 querystring
 It is a string which is constructed by the browser in the form of "K=V" pair in the form page. <br>
 This string will be appended to the URL of the page.
 
@@ -338,7 +348,9 @@ b. slice(index) : string
 📥 input: `http://127.0.0.1:5500/javascript-code/query-string-code.html?name=sachin`<br>
 📥 output: sachin
 
-#### 3️⃣ 🧾 using form elements
+---
+
+### 3️⃣ 🧾 using form elements
       a. checkbox | radio
       b. textbox | password | number | email
       c. dropDown
