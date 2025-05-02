@@ -126,7 +126,7 @@
 <br><br>
 <img src="./img/9.png" width="200">
 <br><br>
-<img src="./img/10.png" width="200">
+<img src="./img/10.png" width="450">
 
 #### 📝 Note:- 
 1. ✅ In Javascript "Arrays are dynamic".
