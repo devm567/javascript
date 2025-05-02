@@ -120,7 +120,7 @@
 ---
 <br>
 
-<img src="./img/11.png" width="300">
+<img src="./img/11.png" width="500">
 <br><br>
 <img src="./img/8.png">
 <br><br>
