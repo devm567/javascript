@@ -195,7 +195,7 @@ document <br>
 | g. textContent            |                                       |
 
 ## 📤 Javascript Output Methods
-#### 1. 🛎️ alert():
+#### 1️⃣ 🛎️ alert():
 
 To display some alert message to the user upon doing some operation we use "alert()".
 syntax: void: alert("string")
@@ -217,35 +217,35 @@ syntax: void: alert("string")
    if a function is not returning anything in statically type language like c, c++, java, we can't call that function in output method calls like printf(), cout<<, System.out.println().<br><br>
    In Javascript, if a function is returning void still we can keep in output method calls and the output in the console would be "undefined".
 
-#### 2. confirm()
+#### 2️⃣ ❓ confirm()
 This method is used to get the confirmation from the user.<br>
 It has two buttons **ok** and **cancel**. <br>
-   - ok     ---> true
-   - cancel ---> false <br>
+   - ✅ ok     ---> true
+   - ❌ cancel ---> false <br>
 
-syntax:<br>
+📌 syntax:<br>
   boolean: confirm("msg");
 
 <br>
 
-limitations:
+⚠️ Limitations:
 
 ```
    a. It accepts only string input, we can't use any HTML + CSS code to present our output.
    b. To get the cursor to the new line we need to use the delimiter called "\n".
 ```
-Eg1: Refer [File](./jscodes/4jsclass.html)
+Eg1: 📎 Refer [File](./jscodes/4jsclass.html)
 
-#### 3. document.write()
+#### 3️⃣ 📝  document.write()
 This method is used to write the content on the page, not like popups.
 
-syntax:
+📌 syntax:
   - void: document.write(string|expression|markup) : cursor in same line
   - void: document.writeln(string|expression|markup) : brings the cursor to new line
 
 <br>
 
-Limitation
+⚠️ Limitation
 
 ```
 a. It disturbs the DOM, the content will be loaded in the same page but on another "window".
@@ -256,17 +256,17 @@ a. It disturbs the DOM, the content will be loaded in the same page but on anoth
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if outer string is in ' "" ' <br>
 Eg: <img src="./img/15.png" width="250">
 
-Refer: [File](./jscodes/5jsclass.html) 
+📎 Refer: [File](./jscodes/5jsclass.html) 
 
 
 
 
-#### 4. innerHTML vs outerHTML
+#### 4️⃣ 🧩 innerHTML vs outerHTML
    
    This property is used to present the content on the same page along with other elements in the page.
    <br>
 
-syntax:
+📌 syntax:
 - accesselement.innerHTML = "String | markup | expression";
 - accesselement.outerHTML = "String | markup | expression";
   <br><br>
@@ -274,7 +274,7 @@ syntax:
 innerHTML: It keeps the element as the child element in the accessed container. <br>
 outerHTML: It replaces the accessed container with the specified element(good for realtime).<br>
 
-Refer: [File](./jscodes/6jsclass.html)
+📎 Refer: [File](./jscodes/6jsclass.html)
 
 <img src="./img/16.png">
 
@@ -282,7 +282,7 @@ Refer: [File](./jscodes/6jsclass.html)
 
 <br>
 
-#### 5. innerText vs outerText
+#### 5️⃣ 🖋️ innerText vs outerText
 This property is used to present the content on the same page along with other elements in the page.
    <br>
 
@@ -291,7 +291,7 @@ syntax:
 - accesselement.outerText = "String";
   <br><br>
 
-#### 6. textContent(used in realtime)
+#### 6️⃣  🧾 textContent(used in realtime)
 This property is used to present the content on the same page along with other elements in the page.
    <br>
 
@@ -299,25 +299,25 @@ syntax:
 - accesselement.textContent = "String";
   <br><br>
 
-## Javascript Input Methods
+## 📥 Javascript Input Methods
 
-#### 1. prompt()
+#### 1️⃣ 💬 prompt()
 a. string: prompt("message", "optional value"); <br>
 b. string: prompt("message"); <br>
 
 <img src="./img/17.png">
 
-Note: The entered input will always be in the form of "String".<br>
+📌 Note: The entered input will always be in the form of "String".<br>
 If the entered input is of the number type then we need to go for "typecoersion|typecasting" before processing the input.<br>
 
-To print the value of the variable within the String we use the following syntax:<br>
+📌 To print the value of the variable within the String we use the following syntax:<br>
 a. \`${variableName}`<br>
 b. "" + variableName<br>
 c. "", variableName<br>
 
 Refer: [File](./jscodes/7jsclass.html)
 
-#### 2. querystring
+#### 2️⃣ 🔑 querystring
 It is a string which is constructed by the browser in the form of "K=V" pair in the form page. <br>
 This string will be appended to the URL of the page.
 
@@ -333,12 +333,12 @@ b. slice(index) : string
 ![](./img/18.png)
 ![](./img/19.png)
 
-Refer: [File](./jscodes/8jsclass.html)
+📎 Refer: [File](./jscodes/8jsclass.html)
 
-input: `http://127.0.0.1:5500/javascript-code/query-string-code.html?name=sachin`<br>
-output: sachin
+📥 input: `http://127.0.0.1:5500/javascript-code/query-string-code.html?name=sachin`<br>
+📥 output: sachin
 
-#### 3. using form elements
+#### 3️⃣ 🧾 using form elements
       a. checkbox | radio
       b. textbox | password | number | email
       c. dropDown
