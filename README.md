@@ -1,16 +1,20 @@
-![](1.png)
-![](2.png)
-![](3.png)
+![](./img/1.png)
+---
+![](./img/2.png)
+---
+![](./img/3.png)
+---
 
-## Issues in Javascript
-1. Javascript is not strongly typed[no need to work with datatypes].
+## ❓ Issues in Javascript
+1️⃣  Javascript is not strongly typed[no need to work with datatypes].
+
 
    ```js
-        var name = "sachin";
+      var name = "sachin";
         name = true;
-    ```
-        
-2. Javascript is not strictly typed[no rules and regulations].
+   ```
+    
+2️⃣  Javascript is not strictly typed[no rules and regulations].
    ```
     2 + 3 = 5
     3 - 2 = 1
@@ -18,8 +22,10 @@
     ```
     "2" + 3 = 23
     "3" - 2 = 1
-    ```
-3. Javascript is not good in handling the data as it is not structured.
+   ```
+
+3️⃣  Javascript is not good in handling the data as it is not structured.
+
    ```
    {
     [
@@ -31,16 +37,17 @@
         "Cost":35000;
     ]
    }
-    ```
-4. Javascript is not 100% OOPs language.
+   ```
+   
+4️⃣  Javascript is not 100% OOPs language.
     - it does not support dynamic polymorphism.
     - it is not secured (deletes cache memory).
   ---
-![](4.png)
-![](5.png)
+![](./img/4.png)
+![](./img/5.png)
 
 ## Complete Overview of Page Rendering
-![](6.png)
+![](./img/6.png)
 
 ### FAQS
 1. What is MIME type for script?
@@ -97,7 +104,7 @@
    How to target advanced features of CSS to work with all browsers?
     > Refer Image
     >
-    > ![](7.png)
+    > ![](./img/7.png)
 
 6. How to link external javascript file to html file?
    ```
@@ -110,13 +117,13 @@
 ---
 <br>
 
-![](11.png)
+![](./img/11.png)
 <br><br>
-![](8.png)
+![](./img/8.png)
 <br><br>
-![](9.png)
+![](./img/9.png)
 <br><br>
-![](10.png)
+![](./img/10.png)
 #### Note:- 
 1.  In Javascript "Arrays are dynamic".
 2. Acessing the elements using DOM heirarchy through index is not a good practice.
@@ -126,7 +133,7 @@
 syntax: 
 - name.property = value; //name is not a form element <br>
 - formName.elementName.property = value; // if element is a form input
-<img src="12.png" width="500" height="100">
+<img src="./img/12.png" width="500" height="100">
 
 syntax: arrayOfElements = document.getElementsByName("Name").<br>
 arrayOfElements[index].property = value;
@@ -134,9 +141,9 @@ arrayOfElements[index].property = value;
 #### Limitation
 a. In case of radio buttons, multiple elements will have same name, at that time javascript code would fail.
 <br><br>
-![](13.png)
+![](./img/13.png)
 <br>
-<img src="14.png" width="400" height="100">
+<img src="./img/14.png" width="400" height="100">
 
 solution: access the element using "id".
 
@@ -243,7 +250,7 @@ a. It disturbs the DOM, the content will be loaded in the same page but on anoth
 > :memo: **Note:** String representation "" | ''<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if outer string is in " '' " <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if outer string is in ' "" ' <br>
-Eg: <img src="15.png" width="250">
+Eg: <img src="./img/15.png" width="250">
 
 Refer: [File](./jscodes/5jsclass.html) 
 
@@ -265,7 +272,7 @@ outerHTML: It replaces the accessed container with the specified element(good fo
 
 Refer: [File](./jscodes/6jsclass.html)
 
-<img src="16.png">
+<img src="./img/16.png">
 
 `<h1>` is replaced with `<h3>` whereas the second `<h3>` is placed  inside `<p>`.
 
@@ -294,7 +301,7 @@ syntax:
 a. string: prompt("message", "optional value"); <br>
 b. string: prompt("message"); <br>
 
-<img src="17.png">
+<img src="./img/17.png">
 
 Note: The entered input will always be in the form of "String".<br>
 If the entered input is of the number type then we need to go for "typecoersion|typecasting" before processing the input.<br>
@@ -319,7 +326,17 @@ Note: Since the data is stored in string format we use string methods to retreiv
 a. indexOf("") : number<br>
 b. slice(index) : string
 
-![](18.png)
-![](19.png)
+![](./img/18.png)
+![](./img/19.png)
 
 Refer: [File](./jscodes/8jsclass.html)
+
+input: `http://127.0.0.1:5500/javascript-code/query-string-code.html?name=sachin`<br>
+output: sachin
+
+#### 3. using form elements
+      a. checkbox | radio
+      b. textbox | password | number | email
+      c. dropDown
+      d. button
+      e. progress | range 
