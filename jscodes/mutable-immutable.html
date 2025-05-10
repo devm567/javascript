@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let str = "Hello";
+        console.log(str);       // Hello
+
+        str[0] = "Y";
+        console.log(str);       // Hello (strings are immutable)
+
+        console.log(typeof str); // string
+
+        let myData = 10;
+        myData.id = "Roll_number";
+        console.log(myData);    // 10 (primitives can't store properties)
+
+        let obj = { i: 10 };
+        console.log(obj);       // { i: 10 }
+
+        obj.name = "dev";
+        console.log(obj);       // { i: 10, name: "dev" }
+
+        obj.id = { country: "IND", type: "cricket" };
+        console.log(obj);       // { i: 10, name: "dev", id: { country: "IND", type: "cricket" } }
+
+        console.log(typeof obj); // object
+
+        delete obj.id;
+        console.log(obj);       // { i: 10, name: "dev" }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

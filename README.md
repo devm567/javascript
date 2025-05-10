@@ -213,7 +213,7 @@ syntax: void: alert("string")
    <body onload="">
    </body>
    ```
-   📎 Refer: [File](./jscodes/thirdjsclass.html)
+   📎 Refer: [File](./jscodes/3jsclass.html)
 
    if a function is not returning anything in statically type language like c, c++, java, we can't call that function in output method calls like printf(), cout<<, System.out.println().<br><br>
    In Javascript, if a function is returning void still we can keep in output method calls and the output in the console would be "undefined".
@@ -512,9 +512,194 @@ b. slice(index) : string
 
 <img src="./img/sample-code4.png" width="500" height="200">
 
-## Basics of Functions
 
-## lexical environment and scope chain
 
-## Difference between let, var and const
-var: It supports hoisting with 'undefined'
+# 🧠 Local Execution Context & Memory Allocation
+
+* Memory is given in the **Local Execution Context** of each function.
+* Each function gets its own separate memory space when called.
+
+### Example 5 -> <a href="./jscodes/sample-code-5.html">sample-code-5.html</a>
+```javascript
+    var x=1;
+    a();
+    b();
+    function a(){
+        var x=10;
+        console.log(x);
+    }
+    function b(){
+        var x=100;
+        console.log(x);
+    }
+
+    console.log(x);
+```
+**Soution:**
+
+<img src="./img/sample-code5.png" width="150" height="100">
+
+---
+
+# 🔍 Lexical Environment & Scope Chain
+
+**Lexical Environment** = Memory of its container + its parent container
+
+**Scope Chain** 🔗:  It refers to the **chain of lexical environments** used to identify  
+the variables | functions to access.
+
+
+<img src="./img/lexical.png" width="700" height="400">
+
+# 🧠 var vs let vs const in JavaScript
+
+### 🔸 var:
+- It supports hoisting with `'undefined'` as the result.
+- Redeclaring the same variable is possible.
+- Reassignment of value to a variable is possible.
+- It is a **function scope** variable.
+- It supports **shadowing**.
+
+---
+
+### 🔹 let:
+- It supports hoisting  
+  ➤ [Variable would be in **Temporal Dead Zone**: it can't be used without initializing]
+- If we try to use the variable present in the Temporal Dead Zone, it would result in:  
+  ⚠️ `ReferenceError: variable can't be accessed without initialization`
+- Redeclaring the same variable is **not possible**.
+- Reassignment of value to a variable is possible.
+- They are **block scope** variables [Can't be used outside the block].
+- It supports **shadowing** [Redeclaring the same variable in a different scope].
+
+---
+
+### 🔷 const:
+- It supports hoisting  
+  ➤ [Variable would be in **Temporal Dead Zone**: it can't be used without initializing]
+- Redeclaring the same variable is **not possible**.
+- Reassignment of value to a variable is also **not possible**  
+  ⚠️ [It results in `TypeError`]
+- They are **block scope** variables [Can't be used outside the block].
+- It supports **shadowing** [Redeclaring the same variable in a different scope].
+
+## 📊 var vs let vs const – Feature Comparison
+
+| 🔧 Feature                | `var`                             | `let`                                                 | `const`                                                 |
+|--------------------------|-----------------------------------|--------------------------------------------------------|----------------------------------------------------------|
+| 🌍 Scope                 | Function Scope                    | Block Scope                                            | Block Scope                                              |
+| 📦 Hoisting              | Yes (initialized as `undefined`) | Yes (but not initialized)    | Yes (but not initialized)      |
+| 🔄 Can be Reassigned     | ✅ Yes                            | ✅ Yes                                                 | ❌ No                                                    |
+| 🔁 Can be Redeclared     | ✅ Yes                            | ❌ No                                                  | ❌ No                                                    |
+| 🕳️ Temporal Dead Zone   | ❌ No                             | ✅ Yes                                                 | ✅ Yes                                                   |
+| 🔁 Use in Loops           | ⚠️ Not safe (due to function scope) | ✅ Safe 👍| ✅ Safe (if no reassignment)|
+| 🌐 Global Object Property | ✅ Yes (if declared globally) | ❌ No| ❌ No|
+
+---
+
+## 🧠 Understanding `this`, `window`, and Global Variables in JavaScript
+
+### 🔍 Key Concepts:
+- Variables declared with `var` in the global scope are added to the `window` object (in browsers).
+- Inside a regular function, `this` refers to the `window` object (when not in strict mode).
+- Modifying `window.b` changes the global `b`.
+
+---
+
+### 🧪 Example:
+> 💻 **Code**: <a href="../javascript-variable-declaration/scope-environment.html">scope-environment.html</a>
+```javascript
+var b = 3;
+
+function a() {
+    console.log(b);         // 🔸 3 – accesses global variable b
+    console.log(this.b);    // 🔸 3 – 'this' refers to window in global context
+    console.log(window.b);  // 🔸 3 – direct access via window object
+
+    window.b = 100;         // 🔄 updates global b
+}
+
+a();
+
+console.log(b); // 🔸 100 – value of b is updated by window.b
+```
+
+## 📝 Variable Naming Rules in JavaScript
+
+1️⃣ Name must start with an **alphabet** or can start with `_` or `$`.
+
+2️⃣ `_` is used for configuring a lot of constructs.  
+It often refers to variables that require further implementation.
+
+```javascript
+var productName;     // its functionality is final 
+var _productName;    // representation :: it is not yet implemented
+```
+3️⃣❌ Don't use special characters in variable names.
+✅ Suggested by ECMA standards.
+
+4️⃣ Name can be **alphanumeric**. `var product2020;`
+
+5️⃣ Name is **case-sensitive.**
+
+6️⃣ Name can be a maximum of **255 characters** long.
+
+7️⃣ Avoid using single-character or overly long variable names.
+
+8️⃣ Avoid using JavaScript **reserved keywords** (There are 45 total).
+  ```javascript
+    var const; // ❌ invalid
+    var if;    // ❌ invalid
+  ```
+  
+9️⃣ Always use camelCase for naming, and it should clearly describe what it is.
+  ```javascript
+    var u = "sachin";         // ❌ not a good approach
+    var userName = "sachin";  // ✅ good approach
+  ```
+## 🔢📄 JavaScript DataTypes Overview
+
+<img src="./img/datatype.png">
+
+## 🔄 Mutable vs Immutable in JavaScript
+
+### 📌 Key Concepts:
+- **Primitive types** like `string` and `number` are **immutable** (can't be changed after creation).
+- **Objects** are **mutable** – you can add, modify, or delete their properties.
+- Even though primitives can hold properties, those are not retained as primitives don't have memory for object-like behavior.
+
+---
+### 🧪 Example Code:
+> 💻 **Code**: <a href="./jscodes/mutable-immutable.html">mutable-immutable.html</a>
+```javascript
+  let str = "Hello";
+  ``console.log(str);       // Hello
+
+  str[0] = "Y";
+  console.log(str);       // Hello (strings are immutable)
+
+  console.log(typeof str); // string
+
+  let myData = 10;
+  myData.id = "Roll_number";
+  console.log(myData);    // ❌ 10 (primitives can't store properties)
+
+  let obj = { i: 10 };
+  console.log(obj);       // { i: 10 }
+
+  obj.name = "dev";
+  console.log(obj);       // { i: 10, name: "dev" }
+
+  obj.id = { country: "IND", type: "cricket" };
+  console.log(obj);       // { i: 10, name: "dev", id: { country: "IND", type: "cricket" } }
+
+  console.log(typeof obj); // object
+
+  delete obj.id;
+  console.log(obj);       // { i: 10, name: "dev" }
+```
+
+> **Note :**<br>
+> Javascript object = {k : v} convert js object to JSON : json.stringify() <br>
+> JSON Object = {k : v} convert string representation to JSON to js object : JSON.parse()<br>
+>  💻 **JS to JSON Code**:   <a href="./jscodes/json.html">json.html</a>
