@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function content(){
+            span=document.querySelectorAll("span");
+            console.log(document.getElementById("divElement").innerText);
+            console.log(document.getElementById("divElement").textContent);          
+        }
+    </script>
+</head>
+<body>
+    <div id="divElement">
+        <p>This is a <span style="display: none;">Hidden</span> Word using Text Content<p>
+        <button onclick="content()">Click On This</button>
+    </div>
+        
+</body>
+</html>

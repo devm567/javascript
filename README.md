@@ -120,7 +120,7 @@
 ---
 <br>
 
-<img src="./img/11.png" width="500">
+<img src="./img/window_tree.png" width="600" height="400">
 <br><br>
 <img src="./img/8.png">
 <br><br>
@@ -183,16 +183,17 @@ document <br>
 
 -----
 ## 🔁 Javascript i/p and o/p operations
-| 📤 Output                    | 📥 Input                                 |
-| :------------------------ | :------------------------------------ |
-| Javascript Output Methods | Java Input Methods                    |
-| a. alert()                | a. prompt()                           |
-| b. confirm()              | b. queryString                        |
-| c. document.write()       | c. using form elements(commonly used) |
-| d. console.****()         |                                       |
-| e. innerHTML vs outerHTML |                                       |
-| f. innerText vs outerText |                                       |
-| g. textContent            |                                       |
+| 📤 Output                                                                           | 📥 Input                               |
+| :--------------------------------------------------------------------------------- | :------------------------------------ |
+| Javascript Output Methods                                                          | Java Input Methods                    |
+| a. alert()                                                                         | a. prompt()                           |
+| b. confirm()                                                                       | b. queryString                        |
+| c. document.write()                                                                | c. using form elements(commonly used) |
+| d. console.****()                                                                  |                                       |
+| e. innerHTML vs outerHTML                                                          |                                       |
+| f. innerText vs outerText                                                          |                                       |
+| g. textContent                                                                     |
+| h. console.log(), console.warn(), console.error(), console.info(), console.debug() |
 
 ## 📤 Javascript Output Methods
 ### 1️⃣ 🛎️ alert():
@@ -307,6 +308,36 @@ syntax:
 - accesselement.textContent = "String";
   <br><br>
 
+#### 📌 Difference: `innerText` vs `textContent`
+
+- **`textContent`**  
+  ✔️ Returns **all text**, including from **hidden elements**  
+  ✔️ **Faster** and better for **raw text**  
+  ✔️ Ignores CSS layout and visibility  
+
+- **`innerText`**  
+  ✔️ Returns only **visible text**  
+  ✔️ Respects **CSS visibility** and **layout**  
+  ✔️ Includes **line breaks and spacing** as shown on screen  
+
+> ⚠️ Use `textContent` for performance.  
+> 🎯 Use `innerText` for accurate, visible representation.
+
+> 💻 Related Code : 
+<a href="./jscodes/textContent-innerText.html">textContent-innerText.html</a>
+
+---
+### 7️⃣🧾 Logs
+
+- Logs refer to the **actions performed by the end user**.  
+To **track user behavior or activity**, we use logs in JavaScript (commonly via `console.log()` or other logging tools).
+
+<img src = "./img/logPath.png">
+
+> 💻 Related Code : 
+  <a href="./jscodes/ConsoleLog-info.html">ConsoleLog-info.html</a>
+---
+
 ## 📥 Javascript Input Methods
 
 ### 1️⃣ 💬 prompt()
@@ -356,3 +387,134 @@ b. slice(index) : string
       c. dropDown
       d. button
       e. progress | range 
+
+# 🚀 How JavaScript Program is Executed (or How JavaScript Runs in the Browser)
+
+* When JavaScript is loaded into the browser's engine, it forms an **Execution Engine** ⚙️  
+  Inside the **Execution Context**, there are two main areas:
+  1. 🧠 **Memory (Variable Environment)** – stores variables and function declarations
+  2. 🔁 **Code Execution (Thread of Execution)** – executes code line by line
+
+### 🖥️ JavaScript in Browser Engine  
+<img src="./img/js_in_browser.png" height="400">
+
+* First, a **Global Execution Context (GEC)** is created automatically 🌐  
+  Then, whenever a function is invoked, a **new Execution Context** is created and pushed onto the **Call Stack**, as shown below:
+
+### 📦 Execution Context Stack  
+<img src="./img/executionContext.png" height="300">
+
+---
+
+### 📝 Additional Points:
+
+* JavaScript is **synchronous and single-threaded** 🧵 — it can only execute one command at a time in a specific order.
+
+* The **Call Stack** 📚 keeps track of execution contexts — the one on top is always the currently running context.
+
+* The **Execution Context** is created in two phases:
+  1. 🔍 **Memory Creation Phase** – variables and functions are stored in memory (hoisted).
+  2. ▶️ **Code Execution Phase** – code runs line by line using the stored memory.
+
+---
+
+> 💻 **Execution Context Code Example**:  
+> <a href="./jscodes/executionContext">executionContext.html</a>
+
+# Hoisting
+- Hoisting: It is a phoenomenon in javascript where **variables and functions can be used without initialization.**
+- var: It supports hoisting.
+- If `var` variable holds a **function expression** or an **arrow function**, it **cannot** be used without intialization.
+- Trying to do so will result in a `TypeError`.
+
+> 🔔 **Note:**  
+> ✅ `undefined` is printable.  
+> ❌ `null` and `void` are not printable as meaningful output.
+
+<img src="./img/scope.png">
+
+### Example 1 -> <a href="./jscodes/sample-code.html">sample-code.html</a>
+```javascript
+    var x=3;
+    function getName(){
+        console.log("PW IOI Javascript");
+    }
+    console.log(x);
+    console.log(getName);
+    getName();
+```
+**Soution:**
+
+<img src="./img/sample-code1.png" width="500" height="150">
+
+### Example 2 -> <a href="./jscodes/sample-code-2.html">sample-code-2.html</a>
+```javascript
+    console.log(x);
+    console.log(getName);
+    getName();
+
+    var x=3;
+    function getName()
+    {
+        console.log("PW IOI Javascript");
+    }
+```
+**Soution:**
+
+<img src="./img/sample-code2.png" width="500" height="150">
+
+### Example 3 -> <a href="./jscodes/sample-code-3.html">sample-code-3.html</a>
+```javascript
+    console.log(x);
+        console.log(getName);
+        getName();
+        console.log(getName1);
+        getName1();
+         
+        var x=3;
+        function getName(){
+            console.log("PW IOI Javascript");
+        }
+
+        var getName1=function(){
+            console.log("PW IOI React")
+        }
+        getName1();
+```
+**Soution:**
+
+<img src="./img/sample-code3.png" width="500" height="200">
+
+### Example 4 -> <a href="./jscodes/sample-code-4.html">sample-code-4.html</a>
+```javascript
+    console.log(x);
+    console.log(getName);
+    getName();
+    
+    console.log(getName2);
+    getName2();
+    console.log(getName1);
+    getName1();
+    var x=3;
+    function getName(){
+        console.log("PW IOI Javascript");
+    }
+
+    var getName1=function(){
+        console.log("PW IOI React")
+    }
+    
+    var getName2 = () =>{
+        console.log("PW IOI Node.js");
+    }
+```
+**Soution:**
+
+<img src="./img/sample-code4.png" width="500" height="200">
+
+## Basics of Functions
+
+## lexical environment and scope chain
+
+## Difference between let, var and const
+var: It supports hoisting with 'undefined'
